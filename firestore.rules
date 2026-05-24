@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+    
+    match /stories/{storyId} {
+      // Publicly readable for the thousands of Play Store app users
+      allow read: if true;
+      // Allow writing only if authenticated as the admin
+      allow write: if request.auth != null && request.auth.token.email == 'sanchoretoday@gmail.com';
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Today's Fable",
+  "description": "A premium, beautifully crafted daily story app designed for seamless, modern, native-like reading experiences across all age groups.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

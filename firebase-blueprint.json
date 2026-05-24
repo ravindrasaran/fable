@@ -1,0 +1,26 @@
+{
+  "entities": {
+    "Story": {
+      "title": "Story",
+      "description": "A generated fable story.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "category": { "type": "string" },
+        "moral": { "type": "string" },
+        "lang": { "type": "string" },
+        "date": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["title", "content", "category", "moral", "date", "lang"]
+    }
+  },
+  "firestore": {
+    "stories/{storyId}": {
+      "schema": { "$ref": "#/entities/Story" },
+      "description": "Fables globally cached and published."
+    }
+  }
+}

@@ -1,0 +1,8 @@
+allowBuilds:
+  '@firebase/util': set this to true or false
+  '@google/genai': set this to true or false
+  esbuild: set this to true or false
+  protobufjs: set this to true or false
+minimumReleaseAgeExclude:
+  - framer-motion@12.40.0
+  - motion-dom@12.40.0
